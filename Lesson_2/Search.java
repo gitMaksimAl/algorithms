@@ -13,8 +13,8 @@ public class Search {
         return true;
     }
 
-    public static int binarySearch(int[] arr, int value, int min, int max) {
-        if (!isSorted(arr)) return -1;
+    private static int binarySearch(int[] arr, int value, int min, int max) {
+        if (!isSorted(arr)) return -1;// check unsorted array
         int point;
         if (max < min) return -1;
         else point = (max - min) / 2 + min;
