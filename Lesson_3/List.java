@@ -7,6 +7,21 @@ package Lesson_3;
 public class List {
     Node head;
 
+    public void push(int value) {
+        Node node = new Node();
+        node.value = value;
+        node.next = head;
+        head = node;
+    }
+
+    public Integer pop() {
+        Integer result = null;
+        if (head != null) {
+            result = head.value;
+            head = head.next;
+        } return result;
+    }
+
     public void revertR() {
         if (head == null && head.next != null) revertR(head.next, head);
     }
