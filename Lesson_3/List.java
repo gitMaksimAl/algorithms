@@ -6,14 +6,24 @@ package Lesson_3;
  */
 public class List {
     Node head;
+    Node tail;
 
     public void push(int value) {
         Node node = new Node();
         node.value = value;
         node.next = head;
+        head.previous = node;
         head = node;
     }
 
+    public Integer pick() {
+        Integer result = null;
+        if (tail != null) {
+            result = tail.value;
+            tail.previous.next = null;
+            tail = tail.previous;
+        } return result;
+    }
     public Integer pop() {
         Integer result = null;
         if (head != null) {
@@ -38,5 +48,6 @@ public class List {
     
         int value;
         Node next;
+        Node previous;
     }
 }
