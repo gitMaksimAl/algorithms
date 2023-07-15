@@ -10,5 +10,15 @@ public class Main {
         tableOne.add("Zdraste", 10);
     
         System.out.println(tableOne.toString());
+
+        BinTree treeOne = new BinTree();
+        treeOne.add(5);
+        treeOne.add(3);
+        treeOne.add(12);
+        treeOne.add(7);
+        treeOne.add(1);
+        treeOne.add(13);
+
+        System.out.println(treeOne.contains(7));
     }
 }
