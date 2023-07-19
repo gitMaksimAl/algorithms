@@ -32,12 +32,12 @@ public class List {
         } return result;
     }
 
-    public void revertR() {
-        if (head == null && head.next != null) revertR(head.next, head);
+    public void revert() {
+        if (head != null && head.next != null) revertR(head.next, head);
     }
     private void revertR(Node current, Node previous) {
         if (current.next == null) head = current;
-        else revertR(current.next, current)
+        else revertR(current.next, current);
         current.next = previous;
         previous.next = null;
     }
